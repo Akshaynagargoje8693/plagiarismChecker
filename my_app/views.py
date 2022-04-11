@@ -94,7 +94,6 @@ def postUpload(request):
         LineCheck.append(0)
     directory='fileDatabase' #our file database directory
     OutputList=[] #a list containing set of statements to be displayed in HTML
-
     for filename in os.listdir(directory): #for each file in the file database
         file=open(f'fileDatabase/{filename}') #opening that file
         bufferlines=[] #same process as above for a different file,refer from line 75
@@ -112,7 +111,10 @@ def postUpload(request):
                 destBufferlinewords.remove(linewords)
         allCount=0 #for number of lines plagiarized in each file
         allTotal=0 #to iterate through the line and keep count of which line being executed and to find total number of lines
+        print("1")
         for eachline in bufferlinewords: #for each line in the file entered by the user
+            OutputContentList = []
+            matched = False
             allTotal+=1 #to iterate through the line and to find total number of lines
             for destEachline in destBufferlinewords: #for eachline in the database file
                 count=0 #to check how many words in a user line is there in dest vfile line
@@ -122,9 +124,16 @@ def postUpload(request):
                     if eachword in destEachline: #to check if the word is there dest line
                         count+=1
                 if (count/total)>=.80: #if 80 percent of user entered line is present in destination file line
+                    print('matched')
+                    matched = True
                     allCount+=1 #increase the plagiarized line by 1
                     LineCheck[allTotal-1]=1 #making that line already plagiarized for the Overall plagiarism Percentage
                     break #if a line is plagiarized no need to check in other lines of the same file hence stop the itertaion and go to next line
+            print("eachline")
+            print(matched)
+            if (matched):
+                OutputContentList.append(eachline)
+            print(eachline)                    
         if(allTotal!=0):
             percentPlag=allCount/allTotal*100 #to find percent plagir from each file
             OutputList.append(f"The Percentage Plagiarism from {filename} is %.2f"%percentPlag) #Append this in the OutputList so that we can print it in HTML
@@ -161,4 +170,22 @@ def addFile(request):
 
         return render(request,'FinalPage/ThankYou.html',OutputStatement) #if they choose no to add files then rendering thank you message
 
-#THANK YOU | A PROJECT BY AMEENA,TABIH,MOIN AND RAYYAN
+def uploadMultipleFilesRender(request):
+    return render(request, 'uploadFiles/uploadFiles.html')
+
+def uploadMultipleFiles(request):
+    #to use gloabal variable in the function
+    global superFile
+    global superList
+    print(request.FILES.getlist('sentFile'))
+    for f in request.FILES.getlist('sentFile'):
+        superFile = f.name
+        OutputStatement={
+        'username':superUsername,
+        'filename':superFile,
+        }
+        filename=superUsername+"'s "+str(superFile) #using the global variable to form a new file name, username +actual filename
+        file=open(f'fileDatabase/{filename}','a') #creating a new file with the our new filename and using append func
+        for line in superList: #using gloabal variable to get each line from the user file
+            file.write(line) #writing line to our new files
+    return render(request,'FinalPage/FileAdded.html',OutputStatement) #rendering file added SUCCESSFULLY message

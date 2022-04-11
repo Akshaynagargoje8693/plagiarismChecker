@@ -7,5 +7,7 @@ urlpatterns = [
     path('register/',views.register),
     path('register/logic/',views.registerlogic),
     path('plagiarism/',views.postUpload),
+    path('uploadFiles/',views.uploadMultipleFilesRender),
+    path('uploadFiles/logic',views.uploadMultipleFiles),
     path('addfile/',views.addFile),
 ]
