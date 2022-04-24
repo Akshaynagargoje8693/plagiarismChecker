@@ -5,10 +5,11 @@ from . import views
 urlpatterns = [
     path('',views.home),
     path('login/',views.login),
+    path('login/',views.logout),
     path('login/logic/',views.loginLogic),
     path('register/',views.register),
     path('register/logic/',views.registerlogic),
-    path('plagiarism/',views.postUpload),
+    path('plagiarism/',views.checkPlagiarism),
     path('plagiarism/check',views.plagiarismRender),
     path('uploadFiles/',views.uploadMultipleFilesRender),
     path('uploadFiles/logic',views.uploadMultipleFiles),

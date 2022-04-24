@@ -44,7 +44,7 @@
           <form method="post" enctype="multipart/form-data" action="/plagiarism/">
             {% csrf_token %}
             <input  type="file" name="sentFile" required> 
-            <select>
+            <select id="compareType" name="compareType">
               <option value="FileDB">File Database</option>
               <option value="Online">Online</option>
             </select>
