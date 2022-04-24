@@ -1,9 +1,8 @@
-# script to strip given text from HTML tags
-# usecase: Content from webpages recovered may have stray HTML tags, like <b> or <i>
+
 
 from html.parser import HTMLParser
 
-#Simple class to encapsulate the stripping of html tags.
+
 class MLStripper(HTMLParser):
     def __init__(self):
         self.reset()
@@ -13,8 +12,7 @@ class MLStripper(HTMLParser):
     def get_data(self):
         return ''.join(self.fed)
 
-#module to strip tags.
-#uses the MLStripper class
+
 def strip_tags(html):
     s = MLStripper()
     s.feed(html)

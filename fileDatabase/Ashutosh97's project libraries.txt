@@ -1,0 +1,44 @@
+JavaScript is the world's most popular programming language.
+this is some randon text which not matches with compare.
+JavaScript is easy to learn.
+This tutorial will teach you JavaScript from basic to advanced.django - Django’s standard library lives in the package django.contrib. Within each subpackage is a separate piece of add-on functionality. These pieces are not necessarily related, but some django.contrib subpackages may require other ones.
+
+googlesearch - googlesearch is a python library for searching google, easily. googlesearch uses requests and BeautifulSoup4 to scrape google.
+
+scholarly - scholarly is a module that allows you to retrieve author and publication information from Google Scholar in a friendly, Pythonic way without having to solve CAPTCHAs.
+
+BeautifulSoup from bs4 - Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
+
+rake_nltk - RAKE short for Rapid Automatic Keyword Extraction algorithm, is a domain independent keyword extraction algorithm which tries to determine key phrases in a body of text by analyzing the frequency of word appearance and its co-occurance with other words in the text.
+
+requests - Requests is a simple, yet elegant, HTTP library.Requests allows you to send HTTP/1.1 requests extremely easily. There's no need to manually add query strings to your URLs, or to form-encode your PUT & POST data — but nowadays, just use the json method!
+
+html.parser -  HTMLParser serves as the basis for parsing text files formatted in HTML (HyperText Mark-up Language) and XHTML.
+
+collections - This module implements specialized container datatypes providing alternatives to Python's general purpose built-in containers, dict, list, set, and tuple.
+
+re, math - This module provides access to the mathematical functions defined by the C standard.Math module provides functions to deal with both basic operations such as addition(+), subtraction(-), multiplication(*), division(/) and advance operations like trigonometric, logarithmic, exponential functions.
+The Python Math Library provides us access to some common math functions and constants in Python, which we can use throughout our code for more complex mathematical computations. The library is a built-in Python module, therefore you don't have to do any installation to use it.
+
+urllib - Urllib package is the URL handling module for python. It is used to fetch URLs (Uniform Resource Locators). It uses the urlopen function and is able to fetch URLs using a variety of different protocols.
+
+
+
+
+
+
+There are so many numbers of plagiarism software available in the market used for detecting plagiarism. And 
+many of them are developed by the researchers and still they have many limitations, like- the software does not 
+have evidence or prove that the content has been plagiarized from the source content available over the internet. It 
+only provides some hints to some documents. Or sometimes only shows the similarities between the original and 
+copied content
+From till now, we conclude that plagiarism detection is absolutely necessary in academics and research 
+organizations. But till now, there is no plagiarism detection software which can accurately find plagiarism any 
+document, text, report or paper; this is because each software or tools have their own advantages and limitations 
+as well. But although, keeping the advantages of these software and the necessity of the plagiarism detection 
+academic enterprises can use one of there the software, But, because of the limitation all most of the software and 
+importance of plagiarism checking in academic fields, we suggest some rules to be followed which can limit 
+student plagiarism.
+
+
+

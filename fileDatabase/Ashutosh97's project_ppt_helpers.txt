@@ -1,0 +1,4 @@
+JavaScript is the world's most popular programming language.
+this is some randon text which not matches with compare.
+JavaScript is easy to learn.
+This tutorial will teach you JavaScript from basic to advanced.
